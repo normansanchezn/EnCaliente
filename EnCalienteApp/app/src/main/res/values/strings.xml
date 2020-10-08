@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EnCaliente</string>
+    <string name="email">usuario@correo.com</string>
+    <string name="password">*********</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="sing_up">Regístrate aquí</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

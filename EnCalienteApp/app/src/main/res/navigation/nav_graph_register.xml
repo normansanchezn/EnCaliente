@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_register"
+    app:startDestination="@id/phoneNumerFragment">
+
+    <fragment
+        android:id="@+id/phoneNumerFragment"
+        android:name="com.empresa.encaliente.ui.register.childfragments.phonenumber.PhoneNumerFragment"
+        android:label="fragment_phone_numer"
+        tools:layout="@layout/fragment_phone_numer" >
+        <action
+            android:id="@+id/action_phoneNumerFragment_to_codeConfirmFragment"
+            app:destination="@id/codeConfirmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/codeConfirmFragment"
+        android:name="com.empresa.encaliente.ui.register.childfragments.codeconfirm.CodeConfirmFragment"
+        android:label="fragment_code_confirm"
+        tools:layout="@layout/fragment_code_confirm" />
+</navigation>
