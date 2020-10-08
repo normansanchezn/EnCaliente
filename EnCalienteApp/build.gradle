@@ -3,19 +3,26 @@ buildscript {
 
     ext {
         kotlin_version = "1.4.10"
+        room_version = "1.1.1"
+        service_version = "4.3.4"
+        crashlytics_gradle_version = "2.3.0"
+        analytics_version = "17.6.0"
+        firestore_version = "21.7.1"
+        crashlytics_version = "17.2.2"
+        auth_version = "19.4.0"
+        play_auth_version = "18.1.0"
     }
-
 
     repositories {
         google()
         jcenter()
     }
+
     dependencies {
         classpath "com.android.tools.build:gradle:4.0.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath "com.google.gms:google-services:$service_version"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlytics_gradle_version"
     }
 }
 

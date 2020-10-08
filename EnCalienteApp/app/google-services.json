@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651336537719",
+    "firebase_url": "https://encaliente-app.firebaseio.com",
+    "project_id": "encaliente-app",
+    "storage_bucket": "encaliente-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651336537719:android:f871a1f4afcc2ed73f9872",
+        "android_client_info": {
+          "package_name": "com.empresa.encaliente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651336537719-v7no1adbha2olttdtkdg35as4i519kgc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvq5hSo75B6iBcroqiw-FXabIRgsJ-zIo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651336537719-v7no1adbha2olttdtkdg35as4i519kgc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

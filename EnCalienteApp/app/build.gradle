@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdkVersion 30
@@ -19,11 +21,13 @@ android {
     buildTypes {
         release {
             minifyEnabled true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
 
         debug {
             minifyEnabled true
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,8 +42,17 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
 
     // Firebase
+    implementation "com.google.firebase:firebase-analytics:$analytics_version"
+    implementation "com.google.firebase:firebase-firestore:$firestore_version"
+    implementation "com.google.firebase:firebase-crashlytics:$crashlytics_version"
+
+    // Authentication - Firebase
+    implementation "com.google.firebase:firebase-auth:$auth_version"
+    implementation "com.google.android.gms:play-services-auth:$play_auth_version"
 
     // Room
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    annotationProcessor "android.arch.persistence.room:compiler:$room_version"
 
     // DI
 
