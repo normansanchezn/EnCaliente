@@ -4,6 +4,9 @@
     <string name="password">*********</string>
     <string name="login">Iniciar sesión</string>
     <string name="sing_up">Regístrate aquí</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_app">En</string>
+    <string name="title_app_hornie">Caliente</string>
+    <string name="hint_number">** ** ** ** **</string>
+    <string name="validate_phone_number">Verifica tu número de teléfono</string>
+    <string name="description_number_verify">Si continúas, es posible que recibas un SMS de  verificación. Pueden aplicarse las tarifas de  mensajes y de datos.</string>
 </resources>

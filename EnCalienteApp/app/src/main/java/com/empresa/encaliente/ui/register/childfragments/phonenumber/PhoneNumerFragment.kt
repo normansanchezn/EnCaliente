@@ -7,39 +7,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
 import kotlinx.android.synthetic.main.fragment_phone_numer.*
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class PhoneNumerFragment : Fragment() {
-
-    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_phone_numer, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        navController = Navigation.findNavController(view)
 
         fabGoCodeConfirm.setOnClickListener {
-            navController.navigate(R.id.codeConfirmFragment)
+            findNavController().navigate(R.id.codeConfirmFragment)
         }
-    }
-
-    companion object {
-        fun newInstance(param1: String, param2: String) =
-            PhoneNumerFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
     }
 }

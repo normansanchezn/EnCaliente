@@ -7,28 +7,17 @@ import android.view.View
 import android.view.ViewGroup
 import com.empresa.encaliente.R
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class CodeConfirmFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
+
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_code_confirm, container, false)
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CodeConfirmFragment().apply {
-                arguments = Bundle().apply {
-                }
-            }
     }
 }

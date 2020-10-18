@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="textMedium">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
 </resources>

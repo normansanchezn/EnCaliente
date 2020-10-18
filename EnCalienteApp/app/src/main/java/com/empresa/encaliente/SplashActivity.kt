@@ -6,6 +6,9 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.empresa.encaliente.ui.login.LoginActivity
 
+/**
+ * Created by Norman Sánchez on 18/10/20.
+ */
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
