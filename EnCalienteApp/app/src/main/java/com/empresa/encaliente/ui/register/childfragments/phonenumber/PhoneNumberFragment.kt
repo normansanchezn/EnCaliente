@@ -10,12 +10,14 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
+import com.empresa.encaliente.utils.Utils
+import com.empresa.encaliente.utils.Validations
 import kotlinx.android.synthetic.main.fragment_phone_numer.*
 
 /**
  * Created by Norman Sánchez on 18/10/20.
  */
-class PhoneNumerFragment : Fragment() {
+class PhoneNumberFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,9 +28,18 @@ class PhoneNumerFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
         fabGoCodeConfirm.setOnClickListener {
-            findNavController().navigate(R.id.codeConfirmFragment)
+            when {
+                etPhoneNumber.text.isEmpty() -> {
+                    Utils().createToast(requireContext(), "¡Debes escribir un número de teléfono!", false)
+                }
+                etPhoneNumber.text.length<10 -> {
+                    Utils().createToast(requireContext(), "Tu número de teléfono debe ser válido", false)
+                }
+                else -> {
+                    findNavController().navigate(R.id.codeConfirmFragment)
+                }
+            }
         }
     }
 }

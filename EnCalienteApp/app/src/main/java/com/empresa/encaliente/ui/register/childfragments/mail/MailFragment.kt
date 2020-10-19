@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
+import com.empresa.encaliente.utils.Utils
 import kotlinx.android.synthetic.main.fragment_mail.*
 
 /**
@@ -27,7 +28,17 @@ class MailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fabConfirmMail.setOnClickListener {
-            findNavController().navigate(R.id.passwordFragment)
+            when {
+                etMail.text.isEmpty() -> {
+                    Utils().createToast(requireContext(), "¡Debes ingresar un correo electrónico!", false)
+                }
+                !etMail.text.contains("@") && !etMail.text.contains(".") -> {
+                    Utils().createToast(requireContext(), "Debes ingresar un correo electrónico válido", false)
+                }
+                else -> {
+                    findNavController().navigate(R.id.passwordFragment)
+                }
+            }
         }
 
     }

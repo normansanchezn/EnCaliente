@@ -28,11 +28,21 @@ class CodeConfirmFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         tvSendAgainOtp.setOnClickListener {
-            Utils().createToast(requireContext(), "Se envió el OTP", false)
+            Utils().createToast(requireContext(), "Se envió el OTP, espere unos segundos", false)
         }
 
         fabConfirmOtp.setOnClickListener {
-            findNavController().navigate(R.id.mailFragment)
+            when {
+                etOtp.text.isEmpty() -> {
+                    Utils().createToast(requireContext(), "¡Debes escribir el OTP para continuar!", false)
+                }
+                etOtp.text.length<6 -> {
+                    Utils().createToast(requireContext(), "OTP inválido, inténtalo de nuevo", false)
+                }
+                else -> {
+                    findNavController().navigate(R.id.mailFragment)
+                }
+            }
         }
     }
 }

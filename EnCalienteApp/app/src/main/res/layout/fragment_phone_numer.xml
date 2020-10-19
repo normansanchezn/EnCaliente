@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.register.childfragments.phonenumber.PhoneNumerFragment">
+    tools:context=".ui.register.childfragments.phonenumber.PhoneNumberFragment">
 
     <TextView
         android:id="@+id/tvEn"
