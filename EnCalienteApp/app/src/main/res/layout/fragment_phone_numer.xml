@@ -16,7 +16,9 @@
         android:layout_marginStart="@dimen/dp32"
         android:layout_marginEnd="@dimen/dp32"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/sp75"
+        android:textSize="@dimen/sp60"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,8 +31,10 @@
         android:layout_marginStart="@dimen/dp32"
         android:layout_marginEnd="@dimen/dp32"
         android:text="@string/title_app_hornie"
+        android:fontFamily="@font/poppins_medium"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/sp75"
+        android:textSize="@dimen/sp60"
         android:layout_marginTop="@dimen/dp70"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCaliente" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etPhoneNumber"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp40"
         android:layout_marginStart="@dimen/dp32"
@@ -76,9 +80,9 @@
         android:fontFamily="@font/poppins_light"
         android:text="@string/description_number_verify"
         android:textColor="@color/color_gray_hint"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintEnd_toEndOf="@+id/etPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/etPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabGoCodeConfirm"

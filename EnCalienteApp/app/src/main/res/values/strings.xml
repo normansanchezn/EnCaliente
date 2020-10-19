@@ -7,6 +7,19 @@
     <string name="title_app">En</string>
     <string name="title_app_hornie">Caliente</string>
     <string name="hint_number">** ** ** ** **</string>
+    <string name="hint_otp">***-***</string>
     <string name="validate_phone_number">Verifica tu número de teléfono</string>
     <string name="description_number_verify">Si continúas, es posible que recibas un SMS de  verificación. Pueden aplicarse las tarifas de  mensajes y de datos.</string>
+    <string name="description_otp">Ingresa el código de 4 dígitos enviado al 5620845397.</string>
+    <string name="re_send_otp">Reenviar código de verificación</string>
+    <string name="validate_mail">¿Cuál es tu dirección de correo electrónico?</string>
+    <string name="description_mail">Los recibos se enviarán a tu correo electrónico</string>
+    <string name="hint_mail">correo@electronico.com</string>
+    <string name="validate_pass">Crea la contraseña de tu cuenta</string>
+    <string name="description_password_rules">La contraseña deberá tener un mínimo de 8 caracteres, incluir un número y al menos una letra.</string>
+    <string name="hint_password">**********************</string>
+    <string name="validate_data_user">¿Cuál es tu nombre?</string>
+    <string name="description_data_user">Indícanos como deberíamos llamarte</string>
+    <string name="hint_name_user">Ingresa tu nombre</string>
+    <string name="hint_last_name">Ingresa tu aprellido</string>
 </resources>

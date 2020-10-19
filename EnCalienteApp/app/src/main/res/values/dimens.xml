@@ -9,4 +9,5 @@
     <dimen name="dp8">8dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp70">70dp</dimen>
+    <dimen name="sp60">60sp</dimen>
 </resources>
