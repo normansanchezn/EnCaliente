@@ -22,4 +22,6 @@
     <string name="description_data_user">Indícanos como deberíamos llamarte</string>
     <string name="hint_name_user">Ingresa tu nombre</string>
     <string name="hint_last_name">Ingresa tu aprellido</string>
+    <string name="title_terms_conditions">Revisa los términos y el Aviso de privacidad de EnCaliente</string>
+    <string name="description_terms_conditions">Marca la casilla para indicar que eres mayor de 18 años, acepta los Términos de uso yreconoces la Política de privacidad.</string>
 </resources>
