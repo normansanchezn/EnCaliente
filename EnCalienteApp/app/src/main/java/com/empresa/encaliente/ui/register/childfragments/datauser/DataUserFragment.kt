@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
+import com.empresa.encaliente.utils.Toolbox
 import kotlinx.android.synthetic.main.fragment_data_user.*
 
 /**
@@ -26,7 +27,16 @@ class DataUserFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         fabConfirmUserData.setOnClickListener {
-            findNavController().navigate(R.id.termsConditionsFragment)
+
+            when {
+                etNameUser.text.isEmpty() || etLastName.text.isEmpty() -> {
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_user_data_empty), false)
+                }
+                else -> {
+                    findNavController().navigate(R.id.termsConditionsFragment)
+                }
+            }
+
         }
     }
 }

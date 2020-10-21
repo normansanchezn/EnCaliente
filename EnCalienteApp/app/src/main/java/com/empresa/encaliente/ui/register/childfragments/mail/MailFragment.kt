@@ -1,13 +1,14 @@
 package com.empresa.encaliente.ui.register.childfragments.mail
 
 import android.os.Bundle
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
-import com.empresa.encaliente.utils.Utils
+import com.empresa.encaliente.utils.Toolbox
 import kotlinx.android.synthetic.main.fragment_mail.*
 
 /**
@@ -30,10 +31,10 @@ class MailFragment : Fragment() {
         fabConfirmMail.setOnClickListener {
             when {
                 etMail.text.isEmpty() -> {
-                    Utils().createToast(requireContext(), "¡Debes ingresar un correo electrónico!", false)
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_empty_mail), false)
                 }
-                !etMail.text.contains("@") && !etMail.text.contains(".") -> {
-                    Utils().createToast(requireContext(), "Debes ingresar un correo electrónico válido", false)
+                !Patterns.EMAIL_ADDRESS.matcher(etMail.text.toString()).matches() -> {
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_validate_email), false)
                 }
                 else -> {
                     findNavController().navigate(R.id.passwordFragment)

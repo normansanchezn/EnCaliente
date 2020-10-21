@@ -1,17 +1,13 @@
 package com.empresa.encaliente.ui.register.childfragments.phonenumber
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
-import com.empresa.encaliente.utils.Utils
-import com.empresa.encaliente.utils.Validations
+import com.empresa.encaliente.utils.Toolbox
 import kotlinx.android.synthetic.main.fragment_phone_numer.*
 
 /**
@@ -31,15 +27,20 @@ class PhoneNumberFragment : Fragment() {
         fabGoCodeConfirm.setOnClickListener {
             when {
                 etPhoneNumber.text.isEmpty() -> {
-                    Utils().createToast(requireContext(), "¡Debes escribir un número de teléfono!", false)
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_empty_phone), false)
                 }
-                etPhoneNumber.text.length<10 -> {
-                    Utils().createToast(requireContext(), "Tu número de teléfono debe ser válido", false)
+                etPhoneNumber.text.length < 10 -> {
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_validate_phone), false)
                 }
                 else -> {
+                    savePhone()
                     findNavController().navigate(R.id.codeConfirmFragment)
                 }
             }
         }
+    }
+
+    private fun savePhone() {
+        // TODO("Not yet implemented")
     }
 }

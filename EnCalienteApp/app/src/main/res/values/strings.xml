@@ -6,8 +6,8 @@
     <string name="sing_up">Regístrate aquí</string>
     <string name="title_app">En</string>
     <string name="title_app_hornie">Caliente</string>
-    <string name="hint_number">** ** ** ** **</string>
-    <string name="hint_otp">***-***</string>
+    <string name="hint_number">**********</string>
+    <string name="hint_otp">******</string>
     <string name="validate_phone_number">Verifica tu número de teléfono</string>
     <string name="description_number_verify">Si continúas, es posible que recibas un SMS de  verificación. Pueden aplicarse las tarifas de  mensajes y de datos.</string>
     <string name="description_otp">Ingresa el código de 4 dígitos enviado al 5620845397.</string>
@@ -24,4 +24,16 @@
     <string name="hint_last_name">Ingresa tu aprellido</string>
     <string name="title_terms_conditions">Revisa los términos y el Aviso de privacidad de EnCaliente</string>
     <string name="description_terms_conditions">Marca la casilla para indicar que eres mayor de 18 años, acepta los Términos de uso yreconoces la Política de privacidad.</string>
+    <string name="error_empty_phone">¡Debes escribir un número de teléfono!</string>
+    <string name="error_validate_phone">Tu número de teléfono debe ser válido</string>
+    <string name="send_otp">Se envió el OTP, espere unos segundos</string>
+    <string name="error_otp_empty">¡Debes escribir el OTP para continuar!</string>
+    <string name="error_otp_validate">OTP inválido, inténtalo de nuevo</string>
+    <string name="error_dont_exist_otp">El OTP no existe, inténtalo de nuevo</string>
+    <string name="error_empty_pass">¡Debes escribir una contraseña!</string>
+    <string name="error_validate_pass">Debes introducir una contraseña válida</string>
+    <string name="error_empty_mail">¡Debes escribir un correo electrónico!</string>
+    <string name="error_validate_email">Debes ingresar un correo electrónico válido</string>
+    <string name="error_user_data_empty">Ningún campo debe estar vacío</string>
+    <string name="error_validate_terms_and_conditions">Para usar esta app, debes aceptar los términos y condiciones</string>
 </resources>

@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.empresa.encaliente.R
-import com.empresa.encaliente.utils.Utils
+import com.empresa.encaliente.utils.Toolbox
 import kotlinx.android.synthetic.main.fragment_code_confirm.*
 
 /**
@@ -17,7 +17,6 @@ class CodeConfirmFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -28,21 +27,30 @@ class CodeConfirmFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         tvSendAgainOtp.setOnClickListener {
-            Utils().createToast(requireContext(), "Se envió el OTP, espere unos segundos", false)
+            Toolbox().createToast(requireContext(), resources.getString(R.string.send_otp), false)
         }
 
         fabConfirmOtp.setOnClickListener {
             when {
                 etOtp.text.isEmpty() -> {
-                    Utils().createToast(requireContext(), "¡Debes escribir el OTP para continuar!", false)
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_otp_empty), false)
                 }
-                etOtp.text.length<6 -> {
-                    Utils().createToast(requireContext(), "OTP inválido, inténtalo de nuevo", false)
+                etOtp.text.length < 6 -> {
+                    Toolbox().createToast(requireContext(), resources.getString(R.string.error_otp_validate), false)
                 }
                 else -> {
-                    findNavController().navigate(R.id.mailFragment)
+                    if (otpExist()){
+                        findNavController().navigate(R.id.mailFragment)
+                    } else {
+                        Toolbox().createToast(requireContext(), resources.getString(R.string.error_dont_exist_otp), false)
+                    }
                 }
             }
         }
+    }
+
+    private fun otpExist(): Boolean {
+        // Return false for don't exist
+        return true
     }
 }

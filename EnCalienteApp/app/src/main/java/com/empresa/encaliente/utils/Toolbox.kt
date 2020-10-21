@@ -6,7 +6,7 @@ import android.widget.Toast
 /**
  * Created by Norman Sánchez on 18/10/20.
  */
-class Utils {
+class Toolbox {
 
     fun createToast(context:Context, txt: String, isDuration:Boolean){
         if (isDuration) {
