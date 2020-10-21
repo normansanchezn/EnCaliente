@@ -36,4 +36,7 @@
     <string name="error_validate_email">Debes ingresar un correo electrónico válido</string>
     <string name="error_user_data_empty">Ningún campo debe estar vacío</string>
     <string name="error_validate_terms_and_conditions">Para usar esta app, debes aceptar los términos y condiciones</string>
+    <string name="error_login">Tus datos son erróneos</string>
+    <string name="register_done">Se registró el usuario correctamente</string>
+    <string name="error_register">No se pudo registrar el usuario, por favor inténtelo de nuevo</string>
 </resources>
